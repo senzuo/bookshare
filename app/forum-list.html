@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>评论列表</title>
+		<script src="../js/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link href="../css/icons-extra.css" rel="stylesheet" />
+		<style>
+			.list{
+				background: #FFFFFF;
+				width: 100%;
+				border-bottom: 1px solid #D8D8D8;
+				border-top: 1px solid #D8D8D8;
+				margin-bottom: 10px;
+			}
+			.img-head{
+				margin: 1%;
+				width: 15%;
+				float: left;
+				margin-right: 10px;
+			}
+			.img-head>img{
+				width: 100%;
+				border-radius: 50%;
+			}
+			.list-content{
+				margin-top: 15px;
+			}
+			.list-content>p{
+				width: 78%;
+				margin-left: 18%;
+				text-align: justify;
+				color: #242424
+			}
+			.comment{
+				width: 78%;
+				margin-left: 18%;
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				background: #E8E8E8;
+			}
+			.comment>p{
+				margin: 8px;
+			}
+			.comment>p:first-child{
+				border-bottom: 1px solid #C8C8C8;
+				padding-bottom:8px;
+				padding-top: 8px;
+			}
+			.date-and-operation{
+				width: 78%;
+				margin-left: 18%;
+				color: gray;
+			}
+			.date-and-operation>span{
+				font-size: 10px;
+			}
+			p{
+				text-align: justify;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">评论</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="list">
+				<div id="shit" class="list-content">
+					<div class="img-head">
+						<img src="../images/a.png" />
+					</div>
+					<p><strong>Saber</strong>&nbsp;点评此书<br /></p>
+					<p>合上书，我忽然感觉我被升华了。合上书，我忽然感觉我被升华了。
+					合上书，我忽然感觉我被升华了。合上书，我忽然感觉我被升华了。合
+					上书，我忽然感觉我被升华了。我忽然感觉我被升华<br />
+					<a>查看</a></p>	
+					<div class="date-and-operation">
+						<span>2月25日&nbsp;00:06</span>
+					</div>
+					<div class="comment">
+					<p>5人觉得很赞 </p>
+					<p><a>小飞</a>&nbsp;写的很生动，对人工智能时代的思考越来越多，有时候
+					真的会引起恐慌</p>
+					<p><a>小飞</a>&nbsp;写的很生动，对人工智能时代的思考越来越多，有时候
+					真的会引起恐慌</p>
+					</div>
+				</div>
+			</div>			
+			
+			<div class="list">
+				<div class="list-content">
+					<div class="img-head">
+						<img src="../images/a.png" />
+					</div>
+					<p><strong>Saber</strong>&nbsp;点评此书</p>
+					<p>合上书，我忽然感觉我被升华了。合上书，我忽然感觉我被升华了。
+					合上书，我忽然感觉我被升华了。合上书，我忽然感觉我被升华了。合
+					上书，我忽然感觉我被升华了。我忽然感觉我被升华<br />
+					<a>查看</a></p>
+					<div class="date-and-operation">
+						<span>2月25日&nbsp;00:06</span>
+					</div>
+					<div class="comment">
+					<p>5人觉得很赞 </p>
+					<p><a>小飞</a>&nbsp;写的很生动，对人工智能时代的思考越来越多，有时候
+					真的会引起恐慌</p>
+					<p><a>小飞</a>&nbsp;写的很生动，对人工智能时代的思考越来越多，有时候
+					真的会引起恐慌</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="display:block;margin-bottom: 60px;"></div>
+
+	
+
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		document.getElementById('shit').addEventListener('tap',function(){
+			location.href = 'comment-detail.html';
+		})
+	</script>
+
+</html>

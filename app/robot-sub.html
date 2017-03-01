@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<style type="text/css">
+			div.speech {
+				margin: 10px 0;
+				padding: 8px;
+				table-layout: fixed;
+				position: relative;
+				word-break:break-all; 
+				background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#ffffff), color-stop(0.1, #ececec), color-stop(0.5, #dbdbdb), color-stop(0.9, #dcdcdc), to(#8c8c8c));
+				border: 1px solid #989898;
+				border-radius: 8px;
+			}
+			div.speech:before {
+				position: absolute;
+				left: 15px;
+				top: -20px;
+				border: 10px solid;
+				border-color: transparent transparent #989898 transparent;
+			}
+			div.speech:after {
+				position: absolute;
+				left: 17px;
+				top: -16px;
+				border: 8px solid;
+				border-color: transparent transparent #ffffff transparent;
+			}
+			div.speech.right {
+				box-shadow: -2px 2px 5px #CCC;
+				margin-right: 10px;
+				float: right;
+				background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#e4ffa7), color-stop(0.1, #bced50), color-stop(0.4, #aed943), color-stop(0.8, #a7d143), to(#99BF40));
+			}
+			div.speech.right:before {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 9px;
+				bottom: auto;
+				left: auto;
+				right: -10px;
+				border-width: 9px 0 9px 10px;
+				border-color: transparent #989898;
+			}
+			div.speech.right:after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 10px;
+				bottom: auto;
+				left: auto;
+				right: -8px;
+				border-width: 8px 0 8px 9px;
+				border-color: transparent #bced50;
+			}
+			div.speech.left {
+				box-shadow: 2px 2px 2px #CCCCCC;
+				margin-left: 10px;
+				float: left;
+				background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#ffffff), color-stop(0.1, #eae8e8), color-stop(0.4, #E3E3E3), color-stop(0.8, #DFDFDF), to(#D9D9D9));
+			}
+			div.speech.left:before {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 9px;
+				bottom: auto;
+				left: -10px;
+				border-width: 9px 10px 9px 0;
+				border-color: transparent #989898;
+			}
+			div.speech.left:after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 10px;
+				bottom: auto;
+				left: -8px;
+				border-width: 8px 9px 8px 0;
+				border-color: transparent #eae8e8;
+			}
+			.leftimg {
+				float: left;
+				margin-top: 10px;
+			}
+			.rightimg {
+				float: right;
+				margin-top: 10px;
+			}
+			.leftd {
+				clear: both;
+				float: left;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			.rightd {
+				clear: both;
+				float: right;
+				padding-right: 20px;
+				padding-left: 20px;
+			}
+			.clear {
+				clear: both;
+			}
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<div class="mui-content">
+
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">客服</h1>
+		</header>
+			<!--聊天内容-->
+			<div id="content">
+				
+			</div>
+			<div style="position: fixed; bottom: 0px; border-top: 1px groove #eee;width: 100%;background-color: #fff;">
+				<input type="text" id="question" style="border-radius: 7px; margin: 5px; width: 75%;" />
+				<button class="mui-btn mui-btn-blue send" style="margin-top: 8px;">发送</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.querySelector(".send").addEventListener('tap', function() {
+				console.log("开始聊天");
+				//Api Key:00bf400b12d67c490e4da7542b99d67b
+				//Api Secret:zyuo8bviytwu
+				var question = document.querySelector("#question").value;
+				document.querySelector("#question").value = "";
+				if (question != null && question != "") {
+					var content = document.querySelector("#content");
+					var rightd_div = document.createElement('div');
+					rightd_div.setAttribute("class", "rightd");
+					var right_div = document.createElement("div");
+					right_div.setAttribute("class", "speech right");
+					right_div.innerHTML = question;
+					rightd_div.appendChild(right_div);
+					content.appendChild(rightd_div);
+					mui.post('http://i.itpk.cn/api.php', {
+						api_key: '00bf400b12d67c490e4da7542b99d67b',
+						api_secret: 'zyuo8bviytwu',
+						question: question
+					}, function(data) {
+						var leftd_div = document.createElement('div');
+						leftd_div.setAttribute("class", "leftd");
+						var left_div = document.createElement("div");
+						left_div.setAttribute("class", "speech left");
+						left_div.innerHTML = data;
+						leftd_div.appendChild(left_div);
+						content.appendChild(leftd_div);
+					});
+				} else {
+					plus.nativeUI.toast("请输入...");
+				}
+			});
+		</script>
+	</body>
+
+</html>

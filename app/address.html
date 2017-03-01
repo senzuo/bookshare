@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>管理收货地址</title>
+		<script src="../js/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+		<style>
+			.mui-plus .plus{
+				display: inline;
+			}
+			
+			.plus{
+				display: none;
+			}
+			
+			#topPopover {
+				position: fixed;
+				top: 16px;
+				right: 6px;
+			}
+			#topPopover .mui-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			p {
+				text-indent: 22px;
+			}
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			.mui-popover {
+				height: 50px;
+			}
+			.mui-content {
+				padding: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a id="addAddress" class="mui-action-menu mui-icon mui-icon-plus mui-pull-right" href="#topPopover"></a>
+			<h1 class="mui-title">管理收货地址</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="mui-card">
+				<div class="mui-card-header"><span>叶新兰</span><span>13779326698</span></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<!--放在容器中不然溢出-->
+						四川省成都市郫县西南交大犀浦校区经管专业15栋
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<label><input type="radio" name="m-address" value="">默认收货地址</label>
+					<div class="mui-button-row">
+						<button class="mui-btn mui-btn-blue">编辑</button>
+						<button class="mui-btn mui-btn-red">删除</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mui-card">
+				<div class="mui-card-header"><span>叶新兰</span><span>13779326698</span></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						四川省成都市郫县西南交大犀浦校区经管专业15栋
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<label><input type="radio" name="m-address" value="">默认收货地址</label>
+					<div class="mui-button-row">
+						<button class="mui-btn mui-btn-blue">编辑</button>
+						<button class="mui-btn mui-btn-red">删除</button>
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header"><span>叶新兰</span><span>13779326698</span></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						四川省成都市郫县西南交大犀浦校区经管专业15栋
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<label><input type="radio" name="m-address" value="">默认收货地址</label>
+					<div class="mui-button-row">
+						<button class="mui-btn mui-btn-blue">编辑</button>
+						<button class="mui-btn mui-btn-red">删除</button>
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header"><span>叶新兰</span><span>13779326698</span></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						四川省成都市郫县西南交大犀浦校区经管专业15栋
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<label><input type="radio" name="m-address" value="">默认收货地址</label>
+					<div class="mui-button-row">
+						<button class="mui-btn mui-btn-blue">编辑</button>
+						<button class="mui-btn mui-btn-red">删除</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="display:block;margin-bottom: 60px;"></div>
+
+		<div id="topPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a href="address-add.html">新增地址</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+	</script>
+
+</html>

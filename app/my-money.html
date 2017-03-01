@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的零钱</title>
+		<script src="../js/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<style>
+			.mui-table-view{
+				font-size: 16px;
+			}
+			.mui-table-view-cell>p{
+				font-size: 16px;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的零钱</h1>
+		</header>
+
+		<div class="mui-content">
+			<div class="mui-card">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						零钱:<span id="my_point">200</span>
+						<button type="button" id="get_gold" class="mui-btn mui-btn-blue">提现</button>
+					</li>
+					<li class="mui-table-view-cell">
+						<p>零钱说明：这些就是你用本软件可以捞到的直接经济收益。如果你想把零钱当作善款捐给本团队，我们也会接收。详情咨询团队BOSS</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div style="display:block;margin-bottom: 60px;"></div>
+
+
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		
+		mui('.mui-table-view-cell').on('tap','#get_gold',function(){
+			alert('兑换成功');
+		});
+	</script>
+
+</html>

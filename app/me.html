@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+		<style>
+		.mui-bar-nav~.mui-content {
+ 	   		padding-top: 35px;
+		}
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的信息</h1>
+		</header>
+		<div class="mui-content">
+			<div class="title"></div>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="member_set.html">
+						<img class="mui-media-object mui-pull-left" src="../images/cbd.jpg">
+						<div class="mui-media-body">
+							CBD
+							<p class='mui-ellipsis'>账号：2014123456</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="title"></div>
+
+			<div class="title">
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="my-collection.html">
+					<span class="mui-icon-extra mui-icon-extra-heart-filled"></span>
+						我的收藏
+					</a>
+				</li>
+				<li class="mui-table-view-cell" >
+					<a class="mui-navigate-right" href="my-wish.html">
+						<span class="mui-icon mui-icon-spinner-cycle mui-spin"></span>
+						我的心愿
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="my-share.html">
+						<span class="mui-icon-extra mui-icon-extra-lamp"></span>
+						我的分享
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="my-apply.html">
+						<span class="mui-icon mui-icon-paperplane"></span>
+						我的申请
+					</a>
+				</li>
+			</ul>
+			<div class="title"></div>
+				
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="message.html">
+					<span class="mui-icon mui-icon-chatbubble"></span>
+					我的消息
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="my-money.html">
+					<span class="mui-icon-extra mui-icon-extra-gold"></span>
+					我的零钱
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="myOrder.html">
+					<span class="mui-icon mui-icon-compose"></span>
+					我的订单
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="my-point.html">
+					<span class="mui-icon mui-icon-flag"></span>
+					我的信誉
+					</a>
+					
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="address.html">
+					<span class="mui-icon-extra mui-icon-extra-express"></span>
+						收货地址
+					</a>
+				</li>
+			</ul>
+			<div class="title"></div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right" href="#">
+						<span class="mui-icon mui-icon-gear"></span>
+						退出登录
+					</a>
+				</li>
+			</ul>
+			<div style="margin-bottom: 60px;"></div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+	</script>
+</html>

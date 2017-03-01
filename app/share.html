@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>书享家</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+	</head>
+
+	<body>
+
+		<style>
+			.mui-control-content {
+				background-color: white;
+				min-height: 500px;
+			}
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+				
+			#topPopover {
+				position: fixed;
+				top: 16px;
+				right: 6px;
+			}
+			#topPopover .mui-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			.mui-popover {
+				height: 100px;
+			}
+
+			.mui-table-view .mui-media-object {
+			    line-height: 100px;
+			    max-width: 120px;
+			    height: 130px;
+			}
+			p{
+				margin-bottom: 8px;
+			}
+		</style>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a id="menu" class="mui-action-menu mui-icon mui-icon-plus mui-pull-right" href="#topPopover"></a>
+			<h1 class="mui-title">分享</h1>
+		</header>
+
+		<!-- 添加分享-->
+		<div id="topPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a href="addShareBook.html">我要分享书籍</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="addShareObject.html">我要分享物品</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="mui-content">
+			<div class="mui-input-row mui-search" style="margin-top:8px;">
+				<input type="search" class="mui-input-clear" placeholder="搜索分享信息" style="margin-bottom: 0px;">
+			</div>
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item" href="#item1mobile">
+				最新
+			</a>
+					<a class="mui-control-item" href="#item2mobile">
+				免费
+			</a>
+					<a class="mui-control-item" href="#item3mobile">
+				教材
+			</a>
+			<a class="mui-control-item" href="#item4mobile">
+				物品
+			</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view mui-table-view-chevron ul_message">
+									<li class='item clearfix'>
+									<a href="shareRentBookDetail.html">
+										<div class='logo_area'>
+											<img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+										</div>
+										<div class='info'>
+        									<div class='other clearfix' style="margin-left: 25px;">
+        									<div class='other_item' style="font-family: 黑体;"><label>摆渡人</label></div>
+        									
+        									<p style="font-size: 0.6rem;">[美]克莱尔麦克福尔</p>
+        									<p style="color: red;font-size: 0.75rem;">￥21.01/周</p>
+        								
+     											<span class='other_item'><label><span class='green'>出租</span></label> 
+            										
+            									</span>
+        									</div>
+        								</div></a>
+        							</li>
+        							<li class="item clearfix">
+        							<a href="shareSellBookDetail.html">
+        								<div class="logo_area">
+        									<img class="mui-media-object mui-pull-left" src="../images/cbd.jpg">
+        								</div>
+        								<div class='info'>
+        									<div class='other clearfix' style="margin-left: 25px;">
+        									<div class='other_item' style="font-family: 黑体;"><label>摆渡人</label></div>
+        									
+        									<p style="font-size: 0.7rem;">[美]克莱尔麦克福尔</p>
+        									<p style="color: red;font-size: 0.75rem;">￥21.01/周</p>
+     											<span class='other_item'><label><span class='green'>购买</span></label> 
+            										
+            									</span>
+        									</div>
+        								</div> </a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="../js/mui.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.js"></script>
+
+		<script>
+			mui.init({
+				swipeBack: false
+			});
+			(function($) {
+				$('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var html2 = '<ul class="mui-table-view mui-table-view-chevron ul_message"><li class="item clearfix"><a href="shareRentBookDetail.html"><div class="logo_area"><img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg"></div><div class="info"><div class="other clearfix" style="margin-left: 25px;"><div class="other_item" style="font-family: 黑体;"><label>摆渡人</label></div><p>现象级全球畅销书</p><p style="font-size: 0.7rem;">作者：[美]克莱尔麦克福尔</p><p style="color: red;font-size: 0.75rem;">￥21.01/周</p><p> 发布日期：2015-06-08</p><span class="other_item"><label><span class="green">出租</span></label> </span></div></div></a></li><li class="item clearfix"><a href="shareSellBookDetail.html"><div class="logo_area"><img class="mui-media-object mui-pull-left" src="../images/cbd.jpg"></div><div class="info"><div class="other clearfix" style="margin-left: 25px;"><div class="other_item" style="font-family: 黑体;"><label>摆渡人</label></div><p>现象级全球畅销书</p><p style="font-size: 0.7rem;">作者：[美]克莱尔麦克福尔</p><p style="color: red;font-size: 0.75rem;">￥21.01/周</p><p> 发布日期：2015-06-08</p><span class="other_item"><label><span class="green">出租</span></label> </span></div></div> </a></li></ul>';
+				var html3 = '<ul class="mui-table-view mui-table-view-chevron ul_message"><li class="item clearfix"><a href="shareRentBookDetail.html"><div class="logo_area"><img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg"></div><div class="info"><div class="other clearfix" style="margin-left: 25px;"><div class="other_item" style="font-family: 黑体;"><label>摆渡人</label></div><p>现象级全球畅销书</p><p style="font-size: 0.7rem;">作者：[美]克莱尔麦克福尔</p><p style="color: red;font-size: 0.75rem;">￥21.01/周</p><p> 发布日期：2015-06-08</p><span class="other_item"><label><span class="green">出租</span></label> </span></div></div></a></li><li class="item clearfix"><a href="shareSellBookDetail.html"><div class="logo_area"><img class="mui-media-object mui-pull-left" src="../images/cbd.jpg"></div><div class="info"><div class="other clearfix" style="margin-left: 25px;"><div class="other_item" style="font-family: 黑体;"><label>摆渡人</label></div><p>现象级全球畅销书</p><p style="font-size: 0.7rem;">作者：[美]克莱尔麦克福尔</p><p style="color: red;font-size: 0.75rem;">￥21.01/周</p><p> 发布日期：2015-06-08</p><span class="other_item"><label><span class="green">出租</span></label> </span></div></div> </a></li></ul>';
+				var html4 = '<ul class="mui-table-view mui-table-view-chevron ul_message"><li class="item clearfix"><a href="shareRentBookDetail.html"><div class="logo_area"><img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg"></div><div class="info"><div class="other clearfix" style="margin-left: 25px;"><div class="other_item" style="font-family: 黑体;"><label>摆渡人</label></div><p>现象级全球畅销书</p><p style="font-size: 0.7rem;">作者：[美]克莱尔麦克福尔</p><p style="color: red;font-size: 0.75rem;">￥21.01/周</p><p> 发布日期：2015-06-08</p><span class="other_item"><label><span class="green">出租</span></label> </span></div></div></a></li><li class="item clearfix"><a href="shareSellBookDetail.html"><div class="logo_area"><img class="mui-media-object mui-pull-left" src="../images/cbd.jpg"></div><div class="info"><div class="other clearfix" style="margin-left: 25px;"><div class="other_item" style="font-family: 黑体;"><label>摆渡人</label></div><p>现象级全球畅销书</p><p style="font-size: 0.7rem;">作者：[美]克莱尔麦克福尔</p><p style="color: red;font-size: 0.75rem;">￥21.01/周</p><p> 发布日期：2015-06-08</p><span class="other_item"><label><span class="green">出租</span></label> </span></div></div> </a></li></ul>';
+				var item2 = document.getElementById('item2mobile');
+				var item3 = document.getElementById('item3mobile');
+				var item4 = document.getElementById('item4mobile');
+
+				document.getElementById('slider').addEventListener('slide', function(e) {
+					if (e.detail.slideNumber === 1) {
+						if (item2.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item2.querySelector('.mui-scroll').innerHTML = html2;
+							}, 500);
+						}
+					} else if (e.detail.slideNumber === 2) {
+						if (item3.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item3.querySelector('.mui-scroll').innerHTML = html3;
+							}, 500);
+						}
+					}else if (e.detail.slideNumber === 3) {
+						if (item4.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item4.querySelector('.mui-scroll').innerHTML = html4;
+							}, 500);
+						}
+					}
+				});
+				var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
+				$('.mui-input-group').on('change', 'input', function() {
+					if (this.checked) {
+						sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
+						//force repaint
+						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
+					}
+				});
+			})(mui);
+		</script>
+
+	</body>
+
+</html>

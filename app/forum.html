@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>评论</title>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js" ></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/app-slider.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<style>
+			.mui-card{
+				margin-top: 7%;
+				margin-bottom: 7%;
+			}
+			.mui-card-footer{
+				position: absolute;
+				bottom: 0%;
+				width: 100%;
+			}
+			.mui-card-content{
+				position: absolute;
+				height: 80%;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">论坛</h1>
+		</header>
+		
+		<div id="viewport" class="viewport">
+			<div class="pageview mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="../images/a.png">
+					<div class="mui-media-body">
+					SABER
+					<p>发表于 2016-06-30 15:30</p>
+					</div>
+				</div>
+				<div class="mui-card-content">
+					<img src="../images/archer.jpg" alt="" width="100%" class="fuck" />
+					<div class="mui-card-content-inner">
+						<p>HI，我觉得这个书特别好。具体好在什么地方呢？你看，这个书是新的，
+						而且里面的内容都是中国字，没有我不懂得字。而且，本书附有插画，可以
+						很好的针对太长不看的人。至于为什么我们的书会卖这么贵，那是因为不卖
+						贵一点，就没钱赚。这都是大实话什么我们的书会卖这么贵，那是因为不卖
+						贵一点，就没钱赚。这都是大实话这都是大实话什么我们的书会卖这么贵，那是因为不卖
+						贵一点，就没钱赚。这都是大实话话这都是大实话什么我们的书会卖这么贵，那是因为不卖
+						贵一点，就没钱赚。这都是大实话</p>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">赞<span class="mui-badge mui-badge-primary">2</span></a>
+					<a id="fuck" class="mui-card-link">评论<span class="mui-badge mui-badge-success">14</span></a>
+					<a id="shit" class="mui-card-link">阅读更多</a>
+				</div>
+			</div>
+			<div class="pageview mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="../images/a.png">
+					<div class="mui-media-body">
+					SABER
+					<p>发表于 2016-06-30 15:30</p>
+					</div>
+				</div>
+				<div class="mui-card-content">
+					<img src="../images/shuijiao.jpg" alt="" width="100%" class="fuck" />
+					<div class="mui-card-content-inner">
+						<p>HI，我觉得这个书特别好。具体好在什，没有我不懂得字。而且，本书附有插画，可以
+						很好的针对太长不看的人。至于为什么我们的书会卖，没有我不懂得字。而且，本书附有插
+						画，可以没有我不懂得字。而且
+						</p>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">赞<span class="mui-badge mui-badge-primary">10</span></a>
+					<a class="mui-card-link">评论<span class="mui-badge mui-badge-success">10</span></a>
+					<a class="mui-card-link">阅读更多</a>
+				</div>
+			</div>
+			<div class="pageview mui-card">
+				<div class="mui-card-header mui-card-media">
+					<img src="../images/a.png">
+					<div class="mui-media-body">
+					SABER
+					<p>发表于 2016-06-30 15:30</p>
+					</div>
+				</div>
+				<div class="mui-card-content">
+					<img src="../images/archer.jpg" alt="" width="100%" class="fuck" />
+					<div class="mui-card-content-inner">
+						<p>HI，我觉得这个书特别好。具体好在什么地方呢？你看，这个书是新的，
+						而且里面的内容都是中国字，没有我不懂得字。而且，本书附有插画，可以
+						很好的针对太长不看的人。至于为什么我们的书会卖这么贵，那是因为不卖
+						贵一点，就没钱赚。这都是大实...</p>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">赞<span class="mui-badge mui-badge-primary">14</span></a>
+					<a class="mui-card-link">评论<span class="mui-badge mui-badge-success">8</span></a>
+					<a class="mui-card-link">阅读更多</a>
+				</div>
+			</div>
+		</div>
+
+		<div style="display:block;margin-bottom: 60px;"></div>
+
+
+	</body>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		document.getElementById('fuck').addEventListener('tap',function(){
+			location.href = 'forum-list.html';
+		})
+		document.getElementById('shit').addEventListener('tap',function(){
+			location.href = 'comment-detail.html';
+		})
+	</script>
+
+</html>
